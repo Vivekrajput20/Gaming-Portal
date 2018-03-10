@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Montserrat Bold"), local("Montserrat-Bold"), url("https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2") format("woff2");
+	unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+	font-family: 'Lora';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v12/HeAP0mHtiTx5JKQlc80wp_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+* {
+	margin: 0; 
+	padding: 0;
+}
+html {
+	height: 100%;
+	background: #0f0c29;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-attachment: fixed;
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+.login-image img{
+	border-radius: 50%;
+	width: 100px;
+	height: auto;
+}
+#msform {
+	width: 90vw;
+	margin: 10px auto 10px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+#msform input, #msform textarea {
+	padding: 7.5px 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 16px;
+}
+#msform .action-button {
+	width: 100px;
+	background: #302B62;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	background: #24243F;
+}
+.fs-title {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 20px;
+}
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 49.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 14px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1;
+}
+#progressbar li:first-child:after {
+	content: none; 
+}
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #24243E;
+	color: white;
+}
+.gender .gen{
+	display: inline;
+	width: 50px !important ;
+	color: rgb(10,15,20);	
+}
+.gender{
+	color: #666;
+	margin-bottom: 10px;
+	font-size: 16px;	
+	padding: 15px 0;
+}
+.error{
+	padding: 7.5px 0 ;
+	width: 100%;
+	text-align: center;
+	color: #f64747;
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.login-message{
+	color: #155724;
+	background-color: #d4edda;
+	border-radius: 2px;
+	padding:15px 0;
+}
+.login-message a {
+	color: #155724;
+	font-weight: 600;
+	text-decoration: none;
+}
+.fogot-form {	
+	margin-bottom: 10px;		
+	padding: 15px 0;
+}
+.forgot-form a {
+	color: #555;
+	font-size: 16px;
+	text-decoration: none;
+}
+.signup-message{
+	color: #31708f;
+	background-color: #d9edff;
+	border-radius: 2px;
+	padding:15px 0;
+}
+.signup-message a {
+	color: #31708f;
+	font-weight: 600;
+	text-decoration: none;
+}
+@media only screen and (min-width: 768px){
+	#msform {
+		width: 500px;
+		margin: 40px auto 40px auto;
+	}
+}

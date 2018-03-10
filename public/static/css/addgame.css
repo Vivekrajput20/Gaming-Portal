@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.submit-btn{
+	display: block;
+}
+body{
+	background: #0f0c29;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-attachment: fixed;
+}
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.container::before{
+	content: " ";
+	width: 100%;
+	height: 60px;
+}
+.info-form{
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 350px;
+}
+.form-head{
+	text-align: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.info-form input, .info-form textarea {
+	padding: 7.5px 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	font-family: montserrat;
+	font-weight: 500;
+	color: #2C3E50;
+	font-size: 16px;
+	min-width: 287px;
+}
+.info-form .submit-btn{
+	width: 200px;
+	background: #302B62;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+.error{
+	padding: 5px 0 ;
+	width: 100%;
+	text-align: center;
+	color: #f64747;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.submit-btn:hover, .submit-btn:focus {
+	background: #24243F;
+}
+.form-subhead{
+	padding: 5px;
+	text-align: center;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	font-size: 1.2rem;
+}
+.fileinput{
+	width: 0.1px;
+	height: .1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.label-btn{
+	background:#eb3d3c;
+	text-align: center;
+	padding: 7px;	
+	cursor: pointer;
+	margin: 5px 0;
+	color: white;
+	border-radius: 3px;
+	min-width: 180px;
+	align-self: center;
+}
+.label-btn:hover{
+	background:#cb1918;
+}
+.event-select{
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	width: 300px; 
+	padding: 7.5px 15px 5px 15px;
+	font-family: montserrat;
+	font-weight: 500;
+	color: #2C3E50;
+	font-size: 16px;
+	cursor: pointer;
+}
+.select-div{
+	background: #fff;
+	border-radius: 5px;
+	background: url("../images/down.png") no-repeat 98% 5px;
+	border: solid 1px #ccc;
+	overflow: hidden;
+	min-width: 287px;
+	margin-bottom: 10px;
+}
+.name-div{
+	box-sizing: border-box;
+	font-family: montserrat;
+	font-weight: 500;
+	color: #2C3E50;
+	font-size: 16px;
+	min-width: 287px;
+	margin-bottom: 10px;
+	max-height: 138px;
+	overflow-y: hidden;
+}
+.name-div .game-input{
+	width: 100%;
+	margin-bottom: 0;
+}
+.names-list{
+	display: none;
+}
+.name-li{
+	background: #eee;
+	padding: 7.5px 15px;
+	cursor: pointer;
+}
+.name-li:hover{
+	background: #ddd;
+}
+.chosen-value {
+	border: 3px solid transparent;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	font-size: 16px;
+}
+.chosen-value:hover {
+	background-color: #302B62;
+	cursor: pointer;
+	color: #fff;
+}
+.chosen-value:hover::-webkit-input-placeholder {
+	color: #fff;
+}
+.chosen-value:focus, .chosen-value.open {
+	box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+	outline: 0;
+	background-color: #302B62;
+	color: #fff;
+}
+.chosen-value:focus::-webkit-input-placeholder, .chosen-value.open::-webkit-input-placeholder {
+	color: #fff;
+}
+.value-list {
+	list-style: none;
+	box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	overflow-y: scroll;
+	font-family: "Montserrat";
+	max-height: 0;
+	font-size: 16px;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	margin-bottom: 10px;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px; 
+}
+.value-list.open {
+	max-height: 124px;
+	overflow: auto;
+}
+.value-list li {
+	position: relative;
+	color: #666;
+	background-color: #FAFCFD;
+	padding:7.5px 15px;
+	font-size: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	cursor: pointer;
+	-webkit-transition: background-color , color .3s;
+	transition: background-color , color .3s;
+	opacity: 1;
+}
+.value-list li:hover {
+	background-color: #302B62;
+	color: #fff;
+}
+.value-list li.closed {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0;
+	opacity: 0;
+}
+.gaid{
+	opacity: 0;
+	display: none;
+}
+@media only screen and (min-width: 768px){
+	.info-form {
+		width: 500px;
+		margin: 10px auto 40px auto;
+	}
+	.submit-btn{
+		align-self: center;
+	}
+	.event-select{
+		width: 105%;
+	}
+}
