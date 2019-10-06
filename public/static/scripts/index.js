@@ -26,7 +26,7 @@ $(document).ready(function() {
 	});
 	$(function(){
 		$('.event-typed').typed({
-			strings: ['<strong>107 games have been played</strong>', '<strong>584 events have been created</strong>','<strong>We are now a community of 1006 players</strong>' , '<strong>Mafia is most popular game</strong>'],
+			strings: ['<strong>107 games have been played</strong>', '<strong>584 events have been created</strong>','<strong>We are now a community of 1006 players</strong>' , '<strong>Mafia is the most popular game</strong>'],
 			contentType:'html',
 			typeSpeed: 100,
 			showCursor: true,
